@@ -1,6 +1,8 @@
 PURE CSS
 --------
 
+For whatever reason, in Backdrop 1.2+ this theme does not work.  We are investigating and thank you for your patience.
+
 Pure CSS is a basic, black and white, simple blank canvas theme using:
 
 - integration with Pure CSS by Yahoo! for more mobile friendly page elements
