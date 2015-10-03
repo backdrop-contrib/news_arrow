@@ -90,11 +90,6 @@ if (!isset($form['#attributes']['class'])) {
       }
 }
 
-
-function news_arrow_menu_tree($variables) {
-return '<ul class="menu">' . $variables['tree'] . '</ul>';
-}
-
 function news_arrow_menu_link(array $variables) {
 $element = $variables['element'];
 

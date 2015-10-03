@@ -36,11 +36,12 @@ CONTENTS OF THIS FILE
 TESTED
 -----
 
-@todo
 This theme has been manually tested successfully creating and viewing nodes and style guide in Backdrop with the Mobile Navigation, Webform and Responsive Menus modules.
 
 KNOWN ISSUES
 ---------------------
+
+Color module integration is not enabled yet.  It is another issue to do for this theme.
 
 NOTE -- this theme is somewhat stable but being developed state.  If you have spare time and shared ideas on how to propel it forward coding cleanly and under the appropriate licenses, you are welcome to join in and offer advice or build it together.
 
@@ -75,7 +76,6 @@ REQUIREMENTS
 ------------
 
 None
-@todo
 
 INSTALLATION
 ------------
