@@ -1,9 +1,7 @@
-PURE CSS
+NEWS ARROW
 --------
 
-For whatever reason, in Backdrop 1.2+ this theme does not work.  We are investigating and thank you for your patience.
-
-Pure CSS is a basic, black and white, simple blank canvas theme using:
+News Arrow is a basic, black and white, simple blank canvas theme using:
 
 - integration with Pure CSS by Yahoo! for more mobile friendly page elements
 - default Backdrop layouts

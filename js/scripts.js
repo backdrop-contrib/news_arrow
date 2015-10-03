@@ -5,7 +5,7 @@
 (function($, Backdrop, window, document, undefined) {
 
   // Show dropdown on hover.
-  Backdrop.behaviors.pure_css_dropdown = {
+  Backdrop.behaviors.news_arrow_dropdown = {
     attach: function(context, setting) {
       //your custom action here
     }
