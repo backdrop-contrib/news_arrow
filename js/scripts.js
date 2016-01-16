@@ -1,6 +1,6 @@
 /**
  * @file
- * JS for Pure CSS.
+ * JS for for News Arrow Theme
  */
 (function($, Backdrop, window, document, undefined) {
 
@@ -12,19 +12,7 @@
   }
 
   $(document).ready(function() {
-
     // run Javascript on page load here
     console.log("Welcome to the console");
-
-    jQuery(window).scroll(function() {
-      var win = jQuery(this);
-      if (win.scrollTop() > 30) {
-        $("html.admin-bar header.l-header").css("top", "0px");
-      } else {
-        $("html.admin-bar header.l-header").css("top", "32px");
-      }
-    });
-
-
   });
 })(jQuery, Backdrop, this, this.document);

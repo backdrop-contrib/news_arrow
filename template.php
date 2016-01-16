@@ -14,6 +14,97 @@ function news_arrow_preprocess_layout(&$variables) {
   if ($variables['content']['header']) {
     $variables['content']['header'] = '<div class="l-header-inner">' . $variables['content']['header'] . '</div>';
   }
+
+$var1 = theme_get_setting('news_arrow_juiced_main_background');
+$var2 = theme_get_setting('news_arrow_juiced_big_statement_background');
+$var3 = theme_get_setting('news_arrow_juiced_main_background_blurred');
+$var4 = theme_get_setting('news_arrow_juiced_big_statement_background_blurred');
+
+if ($var1 && $var3 > 0)
+{
+backdrop_add_css("@media screen and (min-width: 769px) { .juiced-main::before { content: ' '; width: 100%; height: 100%; display: block; position: absolute; z-index: -100; -webkit-filter: blur(20px); -moz-filter: blur(20px); -o-filter: blur(20px); -ms-filter: blur(20px); filter: blur(20px); opacity: 0.4;  background: url($var1) no-repeat; background-size: cover; background-position: center; } }", array('type' => 'inline'));
+}
+
+if ($var1 && $var3 == 0)
+{
+backdrop_add_css("@media screen and (min-width: 769px) { .juiced-main { background: url($var1) no-repeat; background-size: cover; background-position: center; } }", array('type' => 'inline'));
+}
+
+if ($var2 && $var4 > 0)
+{
+backdrop_add_css("@media screen and (min-width: 769px) { .l-big-statement::before { content: ' '; width: 100%; height: 100%; display: block; position: absolute; z-index: -100; -webkit-filter: blur(20px); -moz-filter: blur(20px); -o-filter: blur(20px); -ms-filter: blur(20px); filter: blur(20px); opacity: 0.4;  background: url($var2) no-repeat fixed; background-size: cover; background-position: center; } }", array('type' => 'inline'));
+}
+
+if ($var2 && $var4 == 0)
+{
+backdrop_add_css("@media screen and (min-width: 769px) { .l-big-statement { background: url($var2) no-repeat fixed; background-size: cover; background-position: center; } }", array('type' => 'inline'));
+}
+
+
+$var5 = theme_get_setting('news_arrow_body_main_background');
+$var6 = theme_get_setting('news_arrow_footer_main_background');
+$var7 = theme_get_setting('news_arrow_body_main_background_blurred');
+$var8 = theme_get_setting('news_arrow_footer_main_background_blurred');
+
+if ($var5 && $var7 > 0)
+{
+backdrop_add_css("@media screen and (min-width: 769px) { .layout::before { content: ' '; width: 100%; height: 100%; display: block; position: absolute; z-index: -100; -webkit-filter: blur(20px); -moz-filter: blur(20px); -o-filter: blur(20px); -ms-filter: blur(20px); filter: blur(20px); opacity: 0.4;  background: url($var5) no-repeat; background-size: cover; background-position: center; } }", array('type' => 'inline'));
+}
+
+if ($var5 && $var7 == 0)
+{
+backdrop_add_css("@media screen and (min-width: 769px) { .layout { background: url($var5) no-repeat; background-size: cover; background-position: center; } }", array('type' => 'inline'));
+}
+
+if ($var6 && $var8 > 0)
+{
+backdrop_add_css("@media screen and (min-width: 769px) { footer.l-footer::before { content: ' '; width: 100%; height: 100%; display: block; position: absolute; z-index: -100; -webkit-filter: blur(20px); -moz-filter: blur(20px); -o-filter: blur(20px); -ms-filter: blur(20px); filter: blur(20px); opacity: 0.4;  background: url($var6) no-repeat fixed; background-size: cover; background-position: center; } footer.l-footer { background: transparent; } }", array('type' => 'inline'));
+}
+
+if ($var6 && $var8 == 0)
+{
+backdrop_add_css("@media screen and (min-width: 769px) { footer.l-footer { background: url($var6) no-repeat fixed; background-size: cover; background-position: center; } }", array('type' => 'inline'));
+}
+
+if (theme_get_setting('news_arrow_dynamic_menu') > 0)
+{
+backdrop_add_js("themes/news_arrow/js/dynamic_menu.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('news_arrow_cdn') > 0)
+{
+backdrop_add_css('http://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css', array('type' => 'external', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_css('themes/news_arrow/css/style.css', array('every_page' => TRUE, 'preprocess' => TRUE));
+
+if (theme_get_setting('news_arrow_script1') > 0)
+{
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('news_arrow_script2') > 0)
+{
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('news_arrow_script3') > 0)
+{
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('news_arrow_script4') > 0)
+{
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+}
+else
+{
+backdrop_add_css('themes/news_arrow/css/pure.min.css', array('type' => 'file', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_css('themes/news_arrow/css/style.css', array('type' => 'file', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+backdrop_add_js("themes/news_arrow/js/scripts.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+// backdrop_add_js("document.write('<script src=\"http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1\"></' + 'script>')", array('type' => 'inline', 'scope' => 'footer', 'weight' => 9999));
 }
 
 /**
@@ -102,44 +193,4 @@ $sub_menu = backdrop_render($element['#below']);
 }
 $output = l($element['#title'], $element['#href'], $element['#localized_options']);
 return '<li' . backdrop_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
-}
-
-
-function news_arrow_breadcrumb($variables) {
-
-if (theme_get_setting('news_arrow_cdn') > 0)
-{
-backdrop_add_css('http://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css', array('type' => 'external', 'every_page' => TRUE, 'preprocess' => TRUE));
-backdrop_add_css('themes/news_arrow/css/style.css', array('every_page' => TRUE, 'preprocess' => TRUE));
-
-if (theme_get_setting('news_arrow_script1') > 0)
-{
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
-}
-
-if (theme_get_setting('news_arrow_script2') > 0)
-{
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
-}
-
-if (theme_get_setting('news_arrow_script3') > 0)
-{
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
-}
-
-if (theme_get_setting('news_arrow_script4') > 0)
-{
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
-}
-
-}
-else
-{
-backdrop_add_css('themes/news_arrow/css/pure.min.css', array('type' => 'file', 'every_page' => TRUE, 'preprocess' => TRUE));
-backdrop_add_css('themes/news_arrow/css/style.css', array('type' => 'file', 'every_page' => TRUE, 'preprocess' => TRUE));
-}
-
-backdrop_add_js("themes/news_arrow/js/scripts.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
-backdrop_add_js("document.write('<script src=\"http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1\"></' + 'script>')", array('type' => 'inline', 'scope' => 'footer', 'weight' => 9999));
-
 }
