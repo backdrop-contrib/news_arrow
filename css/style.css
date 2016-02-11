@@ -1,14 +1,16 @@
 /**
  * Style file
  *
- * This file is compiled into style.css
-
-@import "bourbon";
-@import "neat";
+ * This file is compiled into css/your-custom.css
+ * Uncomment the lines of the features you would like to use.
+ * Comment the lines of the features you don't need on this website
  */
-/* ---------- Import base ---------- */
+/* ---------- Import parent theme base ---------- */
 /* Colors */
-/* Font stuff */
+/**
+ * Functions
+ *
+ */
 /**
  * Functions
  *
@@ -19,6 +21,11 @@
  * Snippets of reusable CSS to develop faster and keep code readable
  */
 /* Overwrite the default media mixin for ie9 fallback */
+/**
+ * Mixins
+ *
+ * Snippets of reusable CSS to develop faster and keep code readable
+ */
 /**
  * Extendables
  *
@@ -31,6 +38,11 @@
     display: table;
     clear: both; }
 
+/**
+ * Extendables
+ *
+ * Collect all of your extendable classes, ids and silent extendables.
+ */
 /*
  * Typography
  *
@@ -48,30 +60,30 @@ html {
   -webkit-font-smoothing: antialiased; }
 
 html, button, input, select, textarea {
-  font-family: Helvetica, Arial, sans-serif; }
+  font-family: 'Droid Sans', Arial, sans-serif; }
 
 /* Line-heights */
 body {
-  font-size: 16px;
-  line-height: 1.5em; }
+  font-size: 1.2rem;
+  line-height: 1.4em; }
 
 h1 {
   margin: 0.67em 0;
   padding: 0;
-  font-size: 2em;
+  font-size: 26px;
   line-height: 125%;
   clear: both; }
 
 h2 {
   margin: 0.83em 0;
   padding: 0;
-  font-size: 1.5em;
+  font-size: 23px;
   clear: both; }
 
 h3 {
   margin: 1em 0;
   padding: 0;
-  font-size: 1.17em; }
+  font-size: 17px; }
 
 h4 {
   margin: 1.33em 0;
@@ -185,7 +197,12 @@ a.feed-icon {
   display: inline-block;
   padding: 15px 0 0 0; }
 
-/* ---------- Import custom styles ---------- */
+/*
+ * Typography
+ *
+ * Text styles, fonts, not colours go in this file
+ *
+ */
 /**
  * Layout
  *
@@ -213,7 +230,7 @@ table tbody tr th {
 
 tr td, tr th {
   padding: 4px 9px;
-  border: 1px solid #fefefe;
+  border: 1px solid #fff;
   text-align: left;
   /* LTR */ }
 
@@ -308,7 +325,7 @@ body.admin-bar .layout {
 
 /* ------------------- Main ------------------- */
 .l-container {
-  margin-top: 130px;
+  margin-top: 41px;
   margin-bottom: 40px; }
 
 .l-messages {
@@ -356,7 +373,15 @@ main h2 {
 
 .meta {
   font-size: 0.857em;
-  margin-bottom: -5px; }
+  margin-bottom: 5px;
+  clear: both; }
+
+.meta.submitted {
+  clear: both;
+  font-size: 0.857em;
+  margin-bottom: 20px;
+  display: block;
+  margin-top: -25px; }
 
 .submitted .user-picture img {
   float: left;
@@ -532,13 +557,17 @@ article .link-wrapper ul.links {
 .l-sidebar .block {
   border: 1px solid;
   padding: 15px 20px;
+  padding-left: 5px;
   margin: 0 0 20px; }
+
+.l-sidebar .block ul {
+  padding-left: 0px; }
 
 .l-sidebar h2 {
   margin: 0 0 0.5em;
   border-bottom: 1px solid #d6d6d6;
   padding-bottom: 5px;
-  text-shadow: 0 1px 0 #fefefe;
+  text-shadow: 0 1px 0 #fff;
   font-size: 1.071em;
   line-height: 1.2; }
 
@@ -553,7 +582,7 @@ article .link-wrapper ul.links {
 .l-triptych h2 {
   font-size: 1.714em;
   margin-bottom: 0.8em;
-  text-shadow: 0 1px 0 #fefefe;
+  text-shadow: 0 1px 0 #fff;
   text-align: center;
   line-height: 1; }
 
@@ -622,7 +651,7 @@ article .link-wrapper ul.links {
   /* not LTR */
   padding: 0 10px 3px;
   margin: 0;
-  text-shadow: 0 1px 0 #fefefe;
+  text-shadow: 0 1px 0 #fff;
   -moz-border-radius-topleft: 6px;
   border-top-left-radius: 6px;
   -moz-border-radius-topright: 6px;
@@ -739,7 +768,7 @@ div.admin-panel h3 {
   margin: 16px 7px; }
 
 div.admin-panel dt {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #777;
   padding: 7px 0 0; }
 
 div.admin-panel dd {
@@ -768,7 +797,7 @@ div.admin-panel .description {
   th.priority-low, td.priority-low {
     display: none; }
   .l-container, .l-messages {
-    margin-top: 120px; }
+    margin-top: 40px; }
   .l-sidebar .block {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -776,6 +805,14 @@ div.admin-panel .description {
   .layout--two-column .l-content, .layout--two-column .l-sidebar {
     padding: 0 5px; } }
 
+/**
+ * Layout
+ *
+ * All layout theming should go in this file
+ * general html page elements and non-forms/buttons/footer/header
+ *
+ *
+ */
 /*
  * Components
  *
@@ -881,7 +918,7 @@ fieldset legend {
   padding: 0;
   position: absolute;
   text-indent: 10px;
-  text-shadow: 0 1px 0 #fefefe;
+  text-shadow: 0 1px 0 #fff;
   top: -12px;
   width: 100%;
   -moz-border-radius-topleft: 4px;
@@ -923,7 +960,7 @@ input.form-text, input.form-tel, input.form-email, input.form-url, input.form-co
   max-width: 100%; }
 
 input.form-search {
-  color: #252525; }
+  color: #000; }
 
 .form-item {
   margin-bottom: 1em;
@@ -1118,6 +1155,14 @@ li:hover {
     font-size: 2rem;
     margin-bottom: .5rem; } }
 
+/*
+ * Components
+ *
+ * Include all your design elements in this file.
+ * forms/buttons and non-general html elements
+ *
+ *
+ */
 /**
  * Navigation
  *
@@ -1460,6 +1505,13 @@ header.l-header, .l-header ul.menu li a.active, .l-header ul.menu li.active-trai
     width: auto;
     display: inline; } }
 
+/**
+ * Navigation
+ *
+ * footer/header/main menu/navigation go in this file
+ *
+ *
+ */
 /*
  * Colours
  *
@@ -1472,19 +1524,19 @@ html ::selection, html ::-moz-selection {
   background: #252525; }
 
 a {
-  color: #1cb841; }
+  color: #13903E; }
 
 a:hover, a:active {
-  color: #df7514; }
+  color: #095C30; }
 
 .l-container {
-  background-color: #fefefe; }
+  background-color: #fff; }
 
 .l-header ul.menu li a.active, .l-header ul.menu li.active-trail a {
   background: inherit; }
 
 .comment .comment-arrow {
-  border-color: #fefefe; }
+  border-color: #fff; }
 
 tr.odd, code, kbd, pre, blockquote {
   background-color: #f2f2f2; }
@@ -1493,7 +1545,7 @@ kbd {
   color: #666; }
 
 blockquote:before, blockquote:after {
-  color: #ccc; }
+  color: #777; }
 
 table tr th {
   background: #757575;
@@ -1501,49 +1553,49 @@ table tr th {
   border-bottom-style: none; }
 
 #skip-link a:visited {
-  background: #555;
+  background: #252525;
   background: rgba(0, 0, 0, 0.6);
-  color: #fefefe; }
+  color: #fff; }
 
 .tabs ul.primary li.active a, .js .dropbutton-widget, .js .dropbutton-multiple.open .dropbutton-widget:hover, .custom-menu-toggle .bar, li.node-readmore a, footer.link-wrapper ul.links li, .l-header #mobile-menu li.active-trail a, .l-header .form-text {
-  background-color: #fefefe; }
+  background-color: #fff; }
 
 .l-header .form-text {
-  border-color: #ccc;
+  border-color: #777;
   border-color: rgba(255, 255, 255, 0.3);
   color: #000; }
 
 .l-header .form-text:hover, .l-header .form-text:focus, .l-header .form-text:active {
-  background: #fefefe;
+  background: #fff;
   color: #000; }
 
 .l-header .form-required {
-  color: #fefefe;
-  color: #252525; }
+  color: #fff;
+  color: #000; }
 
 .unpublished .comment-text .comment-arrow {
   border-left: 1px solid #fff4f4;
   border-right: 1px solid #fff4f4; }
 
 .l-header .block-user-login input.form-submit {
-  border-color: #ccc;
+  border-color: #777;
   border-color: rgba(255, 255, 255, 0.5);
-  background: #fefefe;
-  color: #252525; }
+  background: #fff;
+  color: #000; }
 
 .l-header .block-user-login input.form-submit:hover, .l-header .block-user-login input.form-submit:focus {
-  background: #fefefe;
-  color: #252525; }
+  background: #fff;
+  color: #000; }
 
 header.l-header, .l-header ul.menu li a.active, .l-header ul.menu li.active-trail a, .header-menu a {
-  background: #252525;
-  color: #fefefe; }
+  background: #000;
+  color: #fff; }
 
 .gn-menu-main {
   background: transparent !important; }
 
 .gn-trigger {
-  background: #fefefe !important; }
+  background: #fff !important; }
 
 .view-mode-teaser h2 a {
   color: #181818; }
@@ -1559,37 +1611,37 @@ article .link-wrapper ul.links {
   background: rgba(30, 50, 10, 0.08); }
 
 .l-triptych h2 {
-  color: #252525; }
+  color: #000; }
 
 .l-footer-columns, .l-footer {
   color: #c0c0c0;
   color: rgba(255, 255, 255, 0.65);
-  background-color: #252525; }
+  background-color: #000; }
 
 .l-footer-columns a, .l-footer a {
   color: #fcfcfc;
   color: rgba(255, 255, 255, 0.8); }
 
 .l-footer-columns a:hover, .l-footer-columns a:focus, .l-footer a:hover, .l-footer a:focus {
-  color: #fefefe; }
+  color: #fff; }
 
 .l-footer-columns li a:hover, .l-footer-columns li a:focus, .l-footer li a:hover, .l-footer li a:focus {
   background-color: #1f1f21;
   background-color: rgba(255, 255, 255, 0.05); }
 
 .l-footer-columns li a.active {
-  color: #fefefe; }
+  color: #fff; }
 
 .l-footer-columns h2, .l-footer h2 {
-  border-bottom: 1px solid #555;
+  border-bottom: 1px solid #252525;
   border-color: rgba(255, 255, 255, 0.15); }
 
 .l-footer-columns li a, .l-footer li a {
-  border-bottom: 1px solid #555;
+  border-bottom: 1px solid #252525;
   border-color: rgba(255, 255, 255, 0.15); }
 
 .l-footer .section {
-  border-top: 1px solid #555;
+  border-top: 1px solid #252525;
   border-color: rgba(255, 255, 255, 0.15); }
 
 .l-footer .menu li a {
@@ -1598,39 +1650,39 @@ article .link-wrapper ul.links {
   border-color: transparent; }
 
 [dir="rtl"] .l-footer .menu li a {
-  border-left: 1px solid #555;
+  border-left: 1px solid #252525;
   border-right: none; }
 
 .l-footer-wrapper tr.odd {
   background-color: transparent; }
 
 .l-footer-wrapper tr.even {
-  background-color: #ccc;
+  background-color: #777;
   background-color: rgba(0, 0, 0, 0.15); }
 
 .tabs ul.primary li.active a {
-  border-bottom: 1px solid #fefefe; }
+  border-bottom: 1px solid #fff; }
 
 .tabs ul.primary li a {
-  color: #252525;
+  color: #000;
   background-color: #ededed; }
 
 fieldset legend {
   background: #dbdbdb;
-  border: 1px solid #ccc;
+  border: 1px solid #777;
   color: #3b3b3b; }
 
 fieldset legend a {
   color: #3b3b3b; }
 
 fieldset legend a:hover, fieldset legend a:focus, fieldset legend a:active {
-  color: #252525; }
+  color: #000; }
 
 fieldset .fieldset-description {
   color: #3c3c3c; }
 
 input.form-text, input.form-tel, input.form-email, input.form-url, input.form-color, input.form-number, input.form-search, textarea.form-textarea, select.form-select {
-  border: 1px solid #ccc; }
+  border: 1px solid #777; }
 
 /* Disabled form elements */
 input.form-button-disabled, input.form-button-disabled:hover, input.form-button-disabled:focus, input.form-button-disabled:active, .form-disabled input, .form-disabled select, .form-disabled textarea {
@@ -1640,7 +1692,7 @@ input.form-button-disabled, input.form-button-disabled:hover, input.form-button-
 
 .form-disabled .grippie {
   background-color: #ededed;
-  border-color: #ccc; }
+  border-color: #777; }
 
 .form-disabled label {
   color: #717171; }
@@ -1653,36 +1705,36 @@ input.form-button-disabled, input.form-button-disabled:hover, input.form-button-
   border-color: #b8b8b8; }
 
 .button-success, .button-error, .button-warning, .button-secondary, .button-error, .danger, #edit-cancel, .button-secondary, .button, .basic-cart-add-to-cart-link, input[type=button], input[type=reset], input[type=submit] {
-  color: #fefefe; }
+  color: #fff; }
 
 .button, .basic-cart-add-to-cart-link, input[type=button], input[type=submit], .button-success {
-  background: #1cb841; }
+  background: #13903E; }
 
 .button-error, .danger {
   background: #ca3c3c;
   /* this is a maroon */
-  color: #fefefe; }
+  color: #fff; }
 
 .button-warning, #edit-cancel, input[type=reset] {
-  background: #df7514; }
+  background: #095C30; }
 
 .button-secondary {
   background: #42b8dd;
   /* this is a light blue */ }
 
 .danger:hover, #edit-cancel:hover, .danger:focus, #edit-cancel:focus, a.button:hover, a.button:focus, input[type=button]:hover, input[type=reset]:hover, input[type=submit]:hover input[type=button]:focus, input[type=reset]:focus, input[type=submit]:focus {
-  background: #ccc;
-  color: #fefefe;
+  background: #777;
+  color: #fff;
   text-decoration: none; }
 
 .l-header ul.menu li a {
-  color: #fefefe; }
+  color: #fff; }
 
 .custom-menu-wrapper {
-  background-color: #252525; }
+  background-color: #000; }
 
 .custom-menu .pure-menu-link, .custom-menu .pure-menu-heading {
-  color: #fefefe; }
+  color: #fff; }
 
 .custom-menu .pure-menu-link:hover, .custom-menu .pure-menu-heading:hover {
   background-color: transparent; }
@@ -1691,14 +1743,14 @@ input.form-button-disabled, input.form-button-disabled:hover, input.form-button-
   background-color: rgba(0, 0, 0, 0.5); }
 
 .custom-menu-bottom {
-  border-top: 1px solid #ccc;
-  background-color: #ccc \9; }
+  border-top: 1px solid #777;
+  background-color: #777 \9; }
 
 #main-menu li a.active {
   border-bottom: 1px solid #9daca9; }
 
 .l-header .block-system-main-menu ul.menu li {
-  background: #252525 !important; }
+  background: #000 !important; }
 
 tr.odd {
   background: #e4e4e4;
@@ -1721,16 +1773,24 @@ tr, tr.even {
   background: #f2f2f2; }
 
 fieldset {
-  background: #fefefe;
-  border: 1px solid #ccc; }
+  background: #fff;
+  border: 1px solid #777; }
 
 div.admin-panel {
   background: #fbfbfb;
-  border: 1px solid #ccc; }
+  border: 1px solid #777; }
 
 table tr th {
-  background: #ccc; }
+  background: #777; }
 
 @media only screen and (max-width: 768px) {
   .block-system-main-menu .mobile-menu-accordion li.expanded li, .block-system-main-menu .mobile-menu-basic li.expanded li {
-    background: #ccc !important; } }
+    background: #777 !important; } }
+
+/*
+ * Colours
+ *
+ * Colours go in this file
+ *
+ *
+ */
