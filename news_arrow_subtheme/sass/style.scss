@@ -52,11 +52,11 @@ $susy: (
 @import 'your-custom/helpers/extendables';
 
 @import 'core/purecss/base';
+@import 'core/purecss/grids-core';
 @import 'core/purecss/buttons-core';
 @import 'core/purecss/buttons';
-@import 'core/purecss/forms-r';
 @import 'core/purecss/forms';
-@import 'core/purecss/grids-core';
+@import 'core/purecss/forms-r';
 @import 'core/purecss/tables';
 @import 'core/purecss/menus-core';
 @import 'core/purecss/menus-skin';
