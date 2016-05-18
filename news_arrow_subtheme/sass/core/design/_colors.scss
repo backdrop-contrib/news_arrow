@@ -1,9 +1,5 @@
 /*
- * Colours
- *
  * Colours go in this file
- * these defaults come from the Bartik theme and are being transitioned from CSS into SASS variables
- * Big thanks to Jen Simmons for these defaults https://www.drupal.org/u/jensimmons
  */
 @charset "UTF-8" ;
 
@@ -24,7 +20,7 @@ a:active {
   color: $base-link-hover-color;
 }
 
-.l-container {
+.l-wrapper {
   background-color: $white;
 }
 

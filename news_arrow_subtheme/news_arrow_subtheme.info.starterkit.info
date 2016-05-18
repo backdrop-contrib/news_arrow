@@ -2,7 +2,7 @@ name = News Arrow Subtheme
 description = A subtheme of a mobile theme for Backdrop CMS based on Yahoo PureCSS
 backdrop = 1.x
 type = theme
-version = 1.x-1.3
+version = 1.x-1.4
 base theme = news_arrow
 
 stylesheets[all][] = css/your-custom.css
