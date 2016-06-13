@@ -1,7 +1,7 @@
 /**
  * footer/header/main menu/navigation go in this file
  */
-@charset "UTF-8" ;
+@charset "utf-8";
 
 /* ------------------ Header ------------------ */
 #skip-link {
@@ -35,6 +35,7 @@ header.l-header {
   min-height: 50px;
   text-align: center;
   margin: 0 auto;
+  z-index: 1;
 }
 
 html.admin-bar header.l-header {
@@ -238,6 +239,7 @@ body .l-header ul.menu li a.active,
 }
 
 .l-header ul.menu li {
+
   /*float: left;
      LTR */
   list-style: none;
@@ -399,6 +401,14 @@ header.l-header,
     top: 0px;
   }
 
+  html.admin-bar .layout--juiced-up-full-screen-left header.l-header {
+    top: 0px;
+  }
+
+  html.admin-bar .layout--juiced-up-full-screen-right header.l-header {
+    top: 0px;
+  }
+
   .responsive-menus.responsified .responsive-menus-simple li a {
     padding: 5px;
   }
@@ -455,5 +465,43 @@ header.l-header,
     padding-right: 10px;
     width: auto;
     display: inline;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .layout--juiced-up-full-screen-bottom header.l-header {
+    text-align: initial;
+  }
+
+  .layout--juiced-up-full-screen-bottom .logo img {
+    height: 50px;
+  }
+
+  .layout--juiced-up-full-screen-bottom .block-system-header .logo {
+    float: left;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+  }
+
+  html.admin-bar .layout--juiced-up-full-screen-left header.l-header,
+  html.admin-bar .layout--juiced-up-full-screen-right header.l-header {
+    top: 0px;
+  }
+
+  .layout--juiced-up-full-screen-left .logo img {
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 37.5625em) {
+  .l-header {
+    display: flex;
+    order: -2;
+  }
+
+  #mobile-menu-inner {
+    float: none;
+    margin: 0 auto;
   }
 }

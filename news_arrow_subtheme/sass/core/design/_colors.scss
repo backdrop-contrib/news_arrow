@@ -1,7 +1,7 @@
 /*
  * Colours go in this file
  */
-@charset "UTF-8" ;
+@charset "utf-8";
 
 html {
   ::selection,
@@ -424,6 +424,12 @@ div.admin-panel {
 
 table tr th {
   background: $lightgrey;
+}
+
+.l-wrapper.juiced-main,
+.l-content.juiced-main {
+  background-color: transparent;
+  z-index: 1;
 }
 
 @media only screen and (max-width: 768px) {

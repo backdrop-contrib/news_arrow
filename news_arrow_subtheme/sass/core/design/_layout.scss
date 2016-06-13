@@ -2,7 +2,7 @@
  * All layout theming should go in this file
  * general html page elements and non-forms/buttons/footer/header
  */
-@charset "UTF-8" ;
+@charset "utf-8";
 
 /* ------------------ Table Styles ------------------ */
 table {
@@ -109,7 +109,6 @@ ul.tips {
 }
 
 /* ------------------ Layout ------------------ */
-
 body.admin-bar .layout {
   padding-top: 30px;
   margin-top: -30px;
@@ -127,9 +126,9 @@ body.admin-bar .layout {
 
 /* ----------------- Content ------------------ */
 @media (min-width: 48em) {
-.l-content > .view {
-  margin-top: .75em;
-  margin-bottom: .75em;
+  .l-content > .view {
+    margin-top: .75em;
+    margin-bottom: .75em;
   }
 }
 
@@ -184,10 +183,10 @@ main h2 {
 }
 
 .meta.submitted {
-    clear: both;
-    font-size: 0.75em;
-    margin-bottom: 20px;
-    display: block;
+  clear: both;
+  font-size: 0.75em;
+  margin-bottom: 20px;
+  display: block;
 }
 
 .submitted .user-picture img {
@@ -416,7 +415,7 @@ article .link-wrapper ul.links {
 
 /* ------------------ Sidebar ----------------- */
 .l-sidebar .row {
-    margin-left: 0px;
+  margin-left: 0px;
 }
 
 .l-sidebar .block {
@@ -709,5 +708,35 @@ div.admin-panel .description {
   .layout--two-column .l-content,
   .layout--two-column .l-sidebar {
     padding: 0 5px;
+  }
+}
+
+@media screen and (max-width: 37.5625em) {
+  .admin-bar .layout--juiced-up-full-screen-bottom.layout {
+    margin-top: 30px !important;
+  }
+}
+
+@media (min-width: 75em) {
+  .container.container-800 {
+    max-width: 50rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .container.container-960 {
+    max-width: 60rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .container.container-1200 {
+    max-width: 75rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .container.container-1440 {
+    max-width: 90rem;
   }
 }

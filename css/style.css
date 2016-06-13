@@ -1171,6 +1171,26 @@ div.admin-panel .description {
   .layout--two-column .l-content, .layout--two-column .l-sidebar {
     padding: 0 5px; } }
 
+@media screen and (max-width: 37.5625em) {
+  .admin-bar .layout--juiced-up-full-screen-bottom.layout {
+    margin-top: 30px !important; } }
+
+@media (min-width: 75em) {
+  .container.container-800 {
+    max-width: 50rem; } }
+
+@media (min-width: 75em) {
+  .container.container-960 {
+    max-width: 60rem; } }
+
+@media (min-width: 75em) {
+  .container.container-1200 {
+    max-width: 75rem; } }
+
+@media (min-width: 75em) {
+  .container.container-1440 {
+    max-width: 90rem; } }
+
 /**
  * Layout
  *
@@ -1552,7 +1572,8 @@ li:hover {
 header.l-header {
   min-height: 50px;
   text-align: center;
-  margin: 0 auto; }
+  margin: 0 auto;
+  z-index: 1; }
 
 html.admin-bar header.l-header {
   top: 32px; }
@@ -1825,6 +1846,10 @@ header.l-header, .l-header ul.menu li a.active, .l-header ul.menu li.active-trai
 @media only screen and (max-width: 768px) {
   html.admin-bar .block-system-main-menu {
     top: 0px; }
+  html.admin-bar .layout--juiced-up-full-screen-left header.l-header {
+    top: 0px; }
+  html.admin-bar .layout--juiced-up-full-screen-right header.l-header {
+    top: 0px; }
   .responsive-menus.responsified .responsive-menus-simple li a {
     padding: 5px; }
   .responsive-menus.responsified .responsive-menus-simple li ul li a {
@@ -1860,6 +1885,29 @@ header.l-header, .l-header ul.menu li a.active, .l-header ul.menu li.active-trai
     padding-right: 10px;
     width: auto;
     display: inline; } }
+
+@media only screen and (min-width: 600px) {
+  .layout--juiced-up-full-screen-bottom header.l-header {
+    text-align: initial; }
+  .layout--juiced-up-full-screen-bottom .logo img {
+    height: 50px; }
+  .layout--juiced-up-full-screen-bottom .block-system-header .logo {
+    float: left;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px; }
+  html.admin-bar .layout--juiced-up-full-screen-left header.l-header, html.admin-bar .layout--juiced-up-full-screen-right header.l-header {
+    top: 0px; }
+  .layout--juiced-up-full-screen-left .logo img {
+    height: 50px; } }
+
+@media screen and (max-width: 37.5625em) {
+  .l-header {
+    display: flex;
+    order: -2; }
+  #mobile-menu-inner {
+    float: none;
+    margin: 0 auto; } }
 
 /**
  * Navigation
@@ -2134,6 +2182,10 @@ div.admin-panel {
 
 table tr th {
   background: #777; }
+
+.l-wrapper.juiced-main, .l-content.juiced-main {
+  background-color: transparent;
+  z-index: 1; }
 
 @media only screen and (max-width: 768px) {
   .block-system-main-menu .mobile-menu-accordion li.expanded li, .block-system-main-menu .mobile-menu-basic li.expanded li {
